@@ -4,9 +4,14 @@ import '../controllers/cart_controller.dart';
 
 class CheckoutPage extends StatelessWidget {
   final CartController cartController = Get.find<CartController>();
+   void confirmOrder() {
+    
+    print('Order confirmed!');
+  }
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(title: Text('Checkout')),
       body: Padding(
@@ -28,16 +33,29 @@ class CheckoutPage extends StatelessWidget {
                 },
               ),
             ),
-            Text('Total: \$${cartController.totalPrice}',
-                style: TextStyle(fontSize: 24)),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Add your order confirmation logic here
-                Get.snackbar('Order Confirmed', 'Your order has been placed.');
-              },
-              child: Text('Confirm Order'),
+            Center(
+              child: Text('Total: \$${cartController.totalPrice}',
+                  style: TextStyle(fontSize: 24)),
             ),
+            Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 15.0),
+                  height: size.height * 0.06,
+                  width: size.width * 0.7,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      
+                    ),
+                    onPressed: () {
+                       cartController.checkUser();
+                    },
+
+                    
+                    child: Text('Confirm Order'),
+                  ),
+                ),
+              ),
+            
           ],
         ),
       ),

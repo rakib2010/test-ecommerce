@@ -19,12 +19,18 @@ dependencies:
   cached_network_image:
   shared_preferences:
   connectivity_plus:
+  hive_flutter:
+  firebase_core: 
+  firebase_auth: 
+  google_sign_in: 
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  hive_generator: 
+  build_runner: 
 
 
 flutter:

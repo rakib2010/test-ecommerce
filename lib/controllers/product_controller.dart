@@ -10,6 +10,7 @@ class ProductController extends GetxController {
   var productList = <Product>[].obs;
   final apiService = ApiService();
   var isOffline = false.obs;
+  var searchQuery = ''.obs;
 
   @override
   void onInit() {
