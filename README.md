@@ -3,7 +3,7 @@
 
 1. Clone the Repository
 Clone the GitHub repository:
-git clone https://github.com/your-username/your-repository.git
+git clone (https://github.com/rakib2010/test-ecommerce.git)
 cd your-repository
 2. Set Up Firebase
 Go to Firebase Console (https://console.firebase.google.com/).
